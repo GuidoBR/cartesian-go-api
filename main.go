@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -9,9 +10,7 @@ import (
 
 func main() {
 	router := mux.NewRouter()
-	router.HandleFunc("/api/points", GetPoints).Methods("GET")
 
+	fmt.Println("Listening to :8000\n")
 	log.Fatal(http.ListenAndServe(":8000", router))
 }
-
-func GetPoints(w http.ResponseWriter, r *http.Request) {}

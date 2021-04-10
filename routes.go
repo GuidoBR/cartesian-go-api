@@ -41,10 +41,4 @@ var routes = Routes{
 		"/api/points",
 		GetPoints,
 	},
-	Route{
-		"GET /",
-		"GET",
-		"/",
-		GetIndex,
-	},
 }

@@ -3,15 +3,14 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"net/http"
 )
 
 func GetPoints(w http.ResponseWriter, r *http.Request) {
-	points := Points{
-		Point{X: 1, Y: 1},
-		Point{X: 1, Y: 2},
-		Point{X: 1, Y: 3},
-	}
+	f, _ := ioutil.ReadFile("data/points.json")
+	points := Points{}
+	_ = json.Unmarshal([]byte(f), &points)
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.WriteHeader(http.StatusOK)

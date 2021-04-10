@@ -12,6 +12,12 @@ The Manhattan distance is measured "block-wise", as the distance in blocks betwe
 
 On startup, the API server should read a list of points from `data/points.json`.
 
-## Example
+## Run
 
-http http://127.0.0.1:8000/api/points\?x\=10\&y\=20\&distance\=20
+go build && ./cartesian-go-api
+
+curl -s http://127.0.0.1:8000/api/points\?x\=10\&y\=20\&distance\=20
+
+## Tests
+
+go test

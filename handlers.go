@@ -38,7 +38,7 @@ func GetPoints(w http.ResponseWriter, r *http.Request) {
 }
 
 func ManhattanDistance(p1 Point, p2 Point) int {
-	d := abs(p1.X-p2.X) + abs(p1.Y+p2.Y)
+	d := abs(p1.X-p2.X) + abs(p1.Y-p2.Y)
 	return d
 }
 

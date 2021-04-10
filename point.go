@@ -5,4 +5,10 @@ type Point struct {
 	Y int `json:"y"`
 }
 
+type PointWithDistance struct {
+	p Point
+	d int
+}
+
 type Points []Point
+type PointsWithDistance []PointWithDistance

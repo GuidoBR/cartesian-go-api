@@ -8,8 +8,8 @@ func TestManhattanDistanceWithValuesFromPointsJson(t *testing.T) {
 	p1 := Point{100, 20}
 	d := 35
 	expectedPoints := []Point{
-		{78, 8},
 		{90, 43},
+		{78, 8},
 	}
 
 	pd := GetPointsInsideDistance(p1, d)
@@ -29,12 +29,12 @@ func TestManhattanDistanceWithDifferentValuesFromPointsJson(t *testing.T) {
 	p1 := Point{100, 20}
 	d := 45
 	expectedPoints := []Point{
-		{79, 39},
+		{90, 43},
 		{78, 8},
+		{91, 49},
 		{95, -14},
 		{64, 17},
-		{90, 43},
-		{91, 49},
+		{79, 39},
 		{74, 37},
 	}
 
